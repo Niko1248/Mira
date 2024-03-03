@@ -151,8 +151,9 @@ export default {
 		overflow: hidden;
 		height: 62px;
 		width: 100%;
-		border-radius: 10px;
+		border-radius: 12.4px;
 		z-index: 2;
+		clip-path: polygon(7% 31%, 9% 20%, 10% 0, 100% 0, 100% 100%, 0 100%, 0 41%);
 	}
 
 	.l {
@@ -213,12 +214,12 @@ export default {
 
 @keyframes movePolosa {
 	from {
-		transform: translateX(-7vw);
+		transform: translateX(-100%);
 		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.25) 50%, rgba(72, 140, 225, 1) 80%);
 	}
 
 	to {
-		transform: translateX(16vw);
+		transform: translateX(100%);
 		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.25) 50%, rgba(72, 140, 225, 1) 80%);
 	}
 }
@@ -229,7 +230,7 @@ export default {
 	background: transparent;
 	animation-name: movePolosa_2;
 	animation-duration: 3s;
-	animation-delay: 600ms;
+	animation-delay: 5s;
 	animation-iteration-count: infinite;
 	z-index: 2;
 
@@ -237,12 +238,12 @@ export default {
 
 @keyframes movePolosa_2 {
 	from {
-		transform: translateX(-20vw);
+		transform: translateX(-100%);
 		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.25) 50%, rgba(72, 140, 225, 1) 80%);
 	}
 
 	to {
-		transform: translateX(30vw);
+		transform: translateX(300%);
 		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.25) 50%, rgba(72, 140, 225, 1) 80%);
 	}
 }
