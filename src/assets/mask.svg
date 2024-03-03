@@ -1,0 +1,8 @@
+	<svg>
+  <defs>
+    <mask id="maskForWindow" x="0" y="0" width="100%" height="100%" >
+      <rect x="0" y="0" width="16vw" height="100vh" fill="white"/>
+      <circle cx="5" cy="5" r="15" fill="black"/>
+    </mask>
+  </defs>
+</svg>
