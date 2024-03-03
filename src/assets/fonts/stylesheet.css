@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Onest';
+    src: url('./Onest/Onest-Regular.eot');
+    src: local('Onest Regular'), local('./Onest/Onest-Regular'),
+        url('./Onest/Onest-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./Onest/Onest-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('./Onest/Onest-Medium.eot');
+    src: local('Onest Medium'), local('./Onest/Onest-Medium'),
+        url('./Onest/Onest-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./Onest/Onest-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('./Onest/Onest-Bold.eot');
+    src: local('Onest Bold'), local('./Onest/Onest-Bold'),
+        url('./Onest/Onest-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./Onest/Onest-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('./Onest/Onest-ExtraBold.eot');
+    src: local('Onest ExtraBold'), local('./Onest/Onest-ExtraBold'),
+        url('./Onest/Onest-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('./Onest/Onest-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('./Onest/Onest-SemiBold.eot');
+    src: local('Onest SemiBold'), local('./Onest/Onest-SemiBold'),
+        url('./Onest/Onest-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('./Onest/Onest-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

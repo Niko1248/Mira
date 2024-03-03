@@ -4,10 +4,7 @@ import Animation from './components/Animation.vue';
 
 <template>
 
-  <Animation/>
+  <Animation class="Animation" />
 </template>
 
-<style scoped>
-
-
-</style>
+<style lang="scss"></style>

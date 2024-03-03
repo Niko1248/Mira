@@ -1,0 +1,13 @@
+@import "./variables.scss";
+@import "./fonts/stylesheet.css";
+
+body{
+    background-color: #3B3F8C;
+    background-image: url(./bg_mask.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
