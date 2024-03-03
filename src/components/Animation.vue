@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<!-- <div>
 		<div class="message-wait">
 			<div class="window-wait" ref="windowWait">
 				<div class="polosa">
@@ -21,7 +21,7 @@
 		<div class="message">
 			{{ message }}
 		</div>
-	</div>
+	</div> -->
 	<svg>
 		<defs>
 			<mask id="maskForWindow" x="0" y="0" width="100%" height="100%">
@@ -30,13 +30,26 @@
 			</mask>
 		</defs>
 	</svg>
-	<div class="wrapper">
-		<div class="container">
-			<div class="polosa_2"></div>
+	<div class="top">
+		<div class="circle-wait">
+			<div class="star__wrap">
+				<div class="star">
+					<img class="star-big" src="../assets/star.svg" alt="">
+					<img class="star-mini" src="../assets/star.svg" alt="">
+					<img class="star-small" src="../assets/star.svg" alt="">
+				</div>
+			</div>
+
 		</div>
-		<div class="l"><img src="../assets/mask__2.svg" alt="" srcset=""></div>
-		<div class="r"></div>
+		<div class="wrapper">
+			<div class="container">
+				<div class="polosa_2"></div>
+			</div>
+			<div class="l"><img src="../assets/mask__2.svg" alt="" srcset=""></div>
+			<div class="r"></div>
+		</div>
 	</div>
+
 </template>
 
 <script>
@@ -51,7 +64,7 @@ export default {
 			index: 0
 		}
 	},
-	mounted() {
+	/* mounted() {
 		this.showMessage()
 		anime({
 			targets: '.star-big',
@@ -107,7 +120,7 @@ export default {
 				loop: true,
 			})
 	},
-
+ */
 	methods: {
 		showMessage() {
 			let typeMessage = setInterval(() => {
@@ -136,6 +149,10 @@ export default {
 	padding: 10px;
 	font-family: Onest;
 	color: #fff;
+}
+
+.top {
+	position: relative;
 }
 
 .wrapper {
@@ -230,7 +247,7 @@ export default {
 	background: transparent;
 	animation-name: movePolosa_2;
 	animation-duration: 3s;
-	animation-delay: 5s;
+	animation-delay: 1.6s;
 	animation-iteration-count: infinite;
 	z-index: 2;
 
@@ -238,7 +255,7 @@ export default {
 
 @keyframes movePolosa_2 {
 	from {
-		transform: translateX(-100%);
+		transform: translateX(-80%);
 		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.25) 50%, rgba(72, 140, 225, 1) 80%);
 	}
 
@@ -249,12 +266,12 @@ export default {
 }
 
 .circle-wait {
-	width: 35px;
-	height: 35px;
+	width: 32.37px;
+	height: 32.37px;
 	position: absolute;
 	background-color: #488CE1;
-	top: -32%;
-	left: -4.5%;
+	top: -12px;
+	left: -16px;
 	border-radius: 50%;
 }
 
@@ -263,17 +280,102 @@ export default {
 	position: relative;
 	overflow: hidden;
 	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .star {
 	display: flex;
+	animation-name: star;
+	animation-duration: 3s;
+	animation-delay: 3s;
+	animation-iteration-count: infinite;
 	align-items: center;
 	justify-content: center;
-	height: 100%
+	height: 100%;
+}
+
+@keyframes star {
+	0% {
+		transform: rotate(0);
+	}
+
+	30% {
+		transform: rotate(0);
+
+	}
+
+	50% {
+		transform: rotate(-10deg);
+
+	}
+
+	60% {
+		filter: drop-shadow(0px 0px 1px #ffffff72);
+
+	}
+
+	75% {
+		filter: drop-shadow(0px 0px 4px #ffffffc5);
+	}
+
+	85% {
+		filter: drop-shadow(0px 0px 1px #ffffffc5);
+	}
+
+
+	100% {
+		transform: rotate(180deg);
+		filter: drop-shadow(0px 0px 0px #ffffffc5);
+	}
 }
 
 .star-big {
 	width: 23px;
+	animation-name: starBig;
+	animation-duration: 3s;
+	animation-delay: 3s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes starBig {
+	0% {
+		transform: rotate(0);
+	}
+
+	30% {
+		transform: rotate(0);
+
+	}
+
+	50% {
+		transform: rotate(-10deg);
+
+	}
+
+	60% {
+		filter: drop-shadow(0px 0px 1px #ffffff72);
+
+	}
+
+	75% {
+		filter: drop-shadow(0px 0px 4px #ffffffc5);
+	}
+
+	85% {
+		filter: drop-shadow(0px 0px 1px #ffffffc5);
+	}
+
+	95% {
+		transform: rotate(180deg);
+		filter: drop-shadow(0px 0px 0px #ffffffc5);
+	}
+
+	100% {
+		transform: rotate(180deg);
+		filter: drop-shadow(0px 0px 0px #ffffffc5);
+	}
 }
 
 .star-mini {
@@ -285,4 +387,4 @@ export default {
 	width: 6px;
 	position: absolute;
 }
-</style>import { h } from 'vue';
+</style>
