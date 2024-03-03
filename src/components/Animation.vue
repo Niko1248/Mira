@@ -276,8 +276,8 @@ export default {
 	height: 32.37px;
 	position: absolute;
 	background-color: #488CE1;
-	top: -12px;
-	left: -16px;
+	top: -12.6px;
+	left: -15.7px;
 	border-radius: 50%;
 }
 
