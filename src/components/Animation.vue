@@ -34,7 +34,13 @@
 		<div class="circle-wait">
 			<div class="star__wrap">
 				<div class="star">
-					<img class="star-big" src="../assets/star.svg" alt="">
+					<div class="star-big__contaier">
+						<img class="star-big" src="../assets/star.svg" alt="">
+						<div class="vortex"></div>
+						<div class="vortex"></div>
+						<div class="vortex"></div>
+						<div class="vortex"></div>
+					</div>
 					<img class="star-mini" src="../assets/star.svg" alt="">
 					<img class="star-small" src="../assets/star.svg" alt="">
 				</div>
@@ -293,9 +299,10 @@ export default {
 	animation-iteration-count: infinite;
 	align-items: center;
 	justify-content: center;
-	height: 100%;
+	height: fit-content;
 }
 
+/* 
 @keyframes star {
 	0% {
 		transform: rotate(0);
@@ -329,14 +336,134 @@ export default {
 		transform: rotate(180deg);
 		filter: drop-shadow(0px 0px 0px #ffffffc5);
 	}
-}
-
-.star-big {
-	width: 23px;
+} */
+.star-big__contaier {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
 	animation-name: starBig;
 	animation-duration: 3s;
 	animation-delay: 3s;
 	animation-iteration-count: infinite;
+
+	.vortex:nth-child(2) {
+		position: absolute;
+		top: 0px;
+		right: 50%;
+		width: 0px;
+		height: 5px;
+		background-image: url(../assets/star-line.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		animation-name: starLine;
+		animation-duration: 3s;
+		animation-delay: 3s;
+		animation-iteration-count: infinite;
+	}
+
+	.vortex:nth-child(3) {
+		position: absolute;
+		top: 50%;
+		left: -0.5px;
+		width: 5px;
+		height: 0px;
+		background-image: url(../assets/star-line-L.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		animation-name: starLineV;
+		animation-duration: 3s;
+		animation-delay: 3s;
+		animation-iteration-count: infinite;
+
+	}
+
+	.vortex:nth-child(4) {
+		position: absolute;
+		bottom: -1px;
+		left: calc(50% + 3px);
+		width: 0px;
+		height: 5px;
+		background-image: url(../assets/star-line-B.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		animation-name: starLine;
+		animation-duration: 3s;
+		animation-delay: 3s;
+		animation-iteration-count: infinite;
+	}
+
+	.vortex:nth-child(5) {
+		position: absolute;
+		bottom: calc(50%);
+		right: -1px;
+		width: 5px;
+		height: 0px;
+		background-image: url(../assets/star-line-R.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		animation-name: starLineV;
+		animation-duration: 3s;
+		animation-delay: 3s;
+		animation-iteration-count: infinite;
+	}
+}
+
+@keyframes starLineV {
+	0% {
+		height: 0;
+		transform: translateY(0px);
+	}
+
+	50% {
+		height: 1px;
+		transform: translateY(0px);
+	}
+
+	70% {
+		height: 8px;
+		transform: translateY(0px);
+	}
+
+	78% {
+		height: 0px;
+		transform: translateY(-2px)
+	}
+
+	100% {
+		height: 0;
+		transform: translateY(-2px)
+	}
+}
+
+@keyframes starLine {
+	0% {
+		width: 0;
+	}
+
+	50% {
+		width: 1px;
+		transform: translateX(0px);
+	}
+
+	70% {
+		width: 8px;
+	}
+
+	78% {
+		width: 0px;
+		transform: translateX(-2px)
+	}
+
+	100% {
+		width: 0;
+	}
+}
+
+
+.star-big {
+	width: 23px;
+
 }
 
 @keyframes starBig {
@@ -360,7 +487,7 @@ export default {
 	}
 
 	75% {
-		filter: drop-shadow(0px 0px 4px #ffffffc5);
+		filter: drop-shadow(0px 0px 4px #ffffff);
 	}
 
 	85% {
