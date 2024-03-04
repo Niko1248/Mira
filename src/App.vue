@@ -7,4 +7,9 @@ import Animation from './components/Animation.vue';
   <Animation class="Animation" />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.Animation {
+  width: 100%;
+  margin: 5vw;
+}
+</style>

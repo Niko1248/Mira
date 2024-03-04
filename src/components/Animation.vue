@@ -1,12 +1,4 @@
 <template>
-	<svg>
-		<defs>
-			<mask id="maskForWindow" x="0" y="0" width="100%" height="100%">
-				<rect x="0" y="0" width="16vw" height="100vh" fill="white" />
-				<circle cx="5" cy="5" r="20" fill="black" />
-			</mask>
-		</defs>
-	</svg>
 	<div class="top">
 		<div class="circle-wait">
 			<div class="star__wrap">
@@ -37,9 +29,6 @@
 </template>
 
 <script>
-import anime from 'animejs'
-
-
 export default {
 	data() {
 		return {
@@ -48,63 +37,6 @@ export default {
 			index: 0
 		}
 	},
-	/* mounted() {
-		this.showMessage()
-		anime({
-			targets: '.star-big',
-			rotate: [
-				{ value: -15, duration: 400, delay: 200 },
-				{ value: 180, duration: 1500 },
-			],
-			scale: [
-				{ value: 1, duration: 400 },
-				{ value: 1.1, duration: 800 },
-				{ value: 1, duration: 200 }
-			],
-			endDelay: 1000,
-			easing: 'easeInOutQuad',
-			loop: true,
-		}),
-
-			anime({
-				targets: '.star-mini',
-				translateX: [
-					{ value: 0, delay: 200 },
-					{ value: 17, duration: 1400 }
-				],
-				translateY: [
-					{ value: 0, delay: 200 },
-					{ value: -15, duration: 1400 }
-				],
-				rotate: [
-					{ value: -15, duration: 400 },
-					{ value: 270, duration: 1000, delay: 200 },
-				],
-				endDelay: 1000,
-				easing: 'easeInOutQuad',
-				loop: true,
-			}),
-
-			anime({
-				targets: '.star-small',
-				translateX: [
-					{ value: 0, delay: 700 },
-					{ value: 20, duration: 900 }
-				],
-				translateY: [
-					{ value: 0, delay: 700 },
-					{ value: -8, duration: 900 }
-				],
-				rotate: [
-					{ value: -15, duration: 400 },
-					{ value: 270, duration: 1000, delay: 200 },
-				],
-				endDelay: 1000,
-				easing: 'easeInOutQuad',
-				loop: true,
-			})
-	},
- */
 	methods: {
 		showMessage() {
 			let typeMessage = setInterval(() => {
@@ -141,35 +73,41 @@ export default {
 
 .wrapper {
 	display: flex;
-	height: 62px;
+	height: 15vh;
 	position: relative;
 	width: fit-content;
 	opacity: 0.3;
 	filter: drop-shadow(4px 4px 5px #00000028);
+	border-radius: 4vw;
 
 	.container {
 		position: absolute;
 		top: 0;
 		left: 0;
 		overflow: hidden;
-		height: 62px;
+		height: 10vw;
 		width: 100%;
-		border-radius: 12.4px;
+		border-radius: 2vw;
 		z-index: 2;
-		clip-path: polygon(7% 31%, 9% 20%, 10% 0, 100% 0, 100% 100%, 0 100%, 0 41%);
+		clip-path: polygon(0% 37%, 2% 36.5%, 3% 35.5%, 4% 33.3%, 5% 30%, 6% 26%, 7% 20%, 7.5% 12%, 7.5% 9%, 7.5% 5%, 7.3% 0%, 10% 0, 100% 0, 100% 100%, 0 100%, 0 41%);
+
+
 	}
 
 	.l {
+
 		img {
-			object-fit: cover;
+			width: fit-content;
+			height: 10vw;
+			object-fit: contain;
 		}
 	}
 
 	.r {
 		background-color: #488CE1;
-		width: 200px;
-		height: 62px;
-		border-radius: 0px 10px 10px 0px;
+		width: 40vw;
+		height: 10vw;
+		border-radius: 0px 2vw 2vw 0px;
 		position: relative;
 	}
 }
@@ -203,22 +141,22 @@ export default {
 @keyframes movePolosa_2 {
 	from {
 		transform: translateX(-180%);
-		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.25) 50%, rgba(72, 140, 225, 1) 80%);
+		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.45) 50%, rgba(72, 140, 225, 1) 80%);
 	}
 
 	to {
 		transform: translateX(350%);
-		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.25) 50%, rgba(72, 140, 225, 1) 80%);
+		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.45) 50%, rgba(72, 140, 225, 1) 80%);
 	}
 }
 
 .circle-wait {
-	width: 32.37px;
-	height: 32.37px;
+	width: 5vw;
+	height: 5vw;
 	position: absolute;
 	background-color: #488CE1;
-	top: -12.6px;
-	left: -15.7px;
+	top: -1.8vw;
+	left: -2.2vw;
 	border-radius: 50%;
 }
 
@@ -253,7 +191,7 @@ export default {
 	animation-delay: 0.5s;
 
 	img {
-		width: 20px;
+		width: 2.3vw;
 	}
 
 	.vortex:nth-child(2) {
@@ -261,7 +199,7 @@ export default {
 		top: 0px;
 		right: 50%;
 		width: 0px;
-		height: 5px;
+		height: 0.5vw;
 		background-image: url(../assets/star-line.png);
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -273,7 +211,7 @@ export default {
 		position: absolute;
 		top: calc(50%);
 		left: -1px;
-		width: 5px;
+		width: 0.5vw;
 		height: 0px;
 		background-image: url(../assets/star-line-L.png);
 		background-size: cover;
@@ -287,7 +225,7 @@ export default {
 		bottom: -1px;
 		left: calc(50%);
 		width: 0px;
-		height: 5px;
+		height: 0.5vw;
 		background-image: url(../assets/star-line-B.png);
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -298,8 +236,8 @@ export default {
 	.vortex:nth-child(5) {
 		position: absolute;
 		bottom: calc(50%);
-		right: -1px;
-		width: 5px;
+		right: -0.01vw;
+		width: 0.5vw;
 		height: 0px;
 		background-image: url(../assets/star-line-R.png);
 		background-size: cover;
@@ -351,28 +289,28 @@ export default {
 	}
 
 	50% {
-		height: 0px;
+		height: 0;
 		transform: translateY(0px);
 	}
 
 	60% {
-		height: 8px;
+		height: 0.9vw;
 		transform: translateY(0px);
 	}
 
 	70% {
-		height: 8px;
-		transform: translateY(-2px);
+		height: 0.9vw;
+		transform: translateY(-30%);
 	}
 
 	78% {
 		height: 0px;
-		transform: translateY(-2px)
+		transform: translateY(-30%)
 	}
 
 	100% {
 		height: 0;
-		transform: translateY(-2px)
+		transform: translateY(-30%)
 	}
 }
 
@@ -388,114 +326,112 @@ export default {
 	}
 
 	60% {
-		height: 8px;
+		height: 0.9vw;
 		transform: translateY(0px);
 	}
 
 	70% {
-		height: 8px;
-		transform: translateY(2px);
+		height: 0.9vw;
+		transform: translateY(30%);
 	}
 
 	78% {
 		height: 0px;
-		transform: translateY(2px)
+		transform: translateY(30%)
 	}
 
 	100% {
 		height: 0;
-		transform: translateY(2px)
+		transform: translateY(30%)
 	}
 }
 
 @keyframes starLine {
 	0% {
 		width: 0;
-		height: 5px;
+		height: 0.4vw;
 
 	}
 
 	50% {
-		width: 0px;
-		height: 5px;
+		width: 0;
+		height: 0.4vw;
 
 		transform: translateX(0px);
 	}
 
 	60% {
-		width: 8px;
-		height: 5px;
+		width: 0.9vw;
+		height: 0.4vw;
 		transform: translateX(0px);
 	}
 
 	70% {
-		width: 8px;
-		height: 5px;
-		transform: translateX(-2px);
+		width: 0.9vw;
+		height: 0.4vw;
+		transform: translateX(-30%);
 	}
 
 	78% {
-		width: 0px;
-		height: 5px;
-		transform: translateX(-2px)
+		width: 0;
+		height: 0.4vw;
+		transform: translateX(-30%)
 	}
 
 	100% {
-		height: 5px;
-
+		height: 0.4vw;
 		width: 0;
-		transform: translateX(-2px)
+		transform: translateX(-30%)
 	}
 }
 
 @keyframes starLineHB {
 	0% {
 		width: 0;
-		height: 5px;
+		height: 0.4vw;
 
 	}
 
 	50% {
 		width: 0px;
-		height: 5px;
+		height: 0.4vw;
 
 		transform: translateX(0px);
 	}
 
 	60% {
-		width: 8px;
-		height: 5px;
+		width: 0.9vw;
+		height: 0.4vw;
 		transform: translateX(0px);
 	}
 
 	70% {
-		width: 8px;
-		height: 5px;
-		transform: translateX(2px);
+		width: 0.9vw;
+		height: 0.4vw;
+		transform: translateX(30%);
 	}
 
 	78% {
 		width: 0px;
-		height: 5px;
-		transform: translateX(2px)
+		height: 0.4vw;
+		transform: translateX(30%)
 	}
 
 	100% {
-		height: 5px;
-
+		height: 0.4vw;
 		width: 0;
-		transform: translateX(2px)
+		transform: translateX(30%)
 	}
 }
 
 .star-mini {
 	position: absolute;
-	bottom: calc(50% - 5px);
-	left: calc(50% - 5px);
-	width: 8px;
-	height: 8px;
+	bottom: calc(50% - 0.6vw);
+	left: calc(50% - 0.6vw);
+	width: 1.1vw;
+	height: 1.1vw;
 	transform: rotate(0) translateX(0px) translateY(0%);
-	filter: drop-shadow(0px 0px 4px #ffffff);
+	filter: drop-shadow(0px 0px 1vw #ffffff);
 	animation: starMini 4s ease-in-out infinite;
 	animation-delay: 0.5s;
 	transition: all 500ms cubic-bezier(1.000, 0.050, 0.940, 0.760);
@@ -512,23 +448,23 @@ export default {
 	}
 
 	90% {
-		transform: translateX(200%) translateY(-190%) rotate(120deg);
+		transform: translateX(230%) translateY(-190%) rotate(120deg);
 	}
 
 	100% {
 
-		transform: translateX(200%) translateY(-190%) rotate(120deg)
+		transform: translateX(230%) translateY(-190%) rotate(120deg)
 	}
 }
 
 .star-small {
 	position: absolute;
-	bottom: calc(50% - 4px);
-	left: calc(50% - 4px);
-	width: 4px;
-	height: 4px;
+	bottom: calc(50% - 0.3vw);
+	left: calc(50% - 0.3vw);
+	width: 0.6vw;
+	height: 0.6vw;
 	transform: rotate(0) translateX(0px) translateY(0%);
-	filter: drop-shadow(0px 0px 4px #ffffff);
+	filter: drop-shadow(0px 0px 1vw #ffffff);
 	animation: starSmall 4s ease-in-out infinite;
 	animation-delay: 0.5s;
 	transition: all 500ms cubic-bezier(1.000, 0.545, 1.000, 0.850);
@@ -549,7 +485,7 @@ export default {
 
 	100% {
 
-		transform: translateX(20px) translateY(-8px) rotate(120deg)
+		transform: translateX(500%) translateY(-130%) rotate(120deg)
 	}
 }
 </style>
