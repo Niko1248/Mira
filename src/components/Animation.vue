@@ -1,27 +1,4 @@
 <template>
-	<!-- <div>
-		<div class="message-wait">
-			<div class="window-wait" ref="windowWait">
-				<div class="polosa">
-
-				</div>
-			</div>
-
-			<div class="circle-wait">
-				<div class="star__wrap">
-					<div class="star">
-						<img class="star-big" src="../assets/star.svg" alt="">
-						<img class="star-mini" src="../assets/star.svg" alt="">
-						<img class="star-small" src="../assets/star.svg" alt="">
-					</div>
-				</div>
-
-			</div>
-		</div>
-		<div class="message">
-			{{ message }}
-		</div>
-	</div> -->
 	<svg>
 		<defs>
 			<mask id="maskForWindow" x="0" y="0" width="100%" height="100%">
@@ -34,6 +11,8 @@
 		<div class="circle-wait">
 			<div class="star__wrap">
 				<div class="star">
+					<img class="star-mini" src="../assets/star.svg" alt="">
+					<img class="star-small" src="../assets/star.svg" alt="">
 					<div class="star-big__contaier">
 						<img class="star-big" src="../assets/star.svg" alt="">
 						<div class="vortex"></div>
@@ -41,8 +20,7 @@
 						<div class="vortex"></div>
 						<div class="vortex"></div>
 					</div>
-					<img class="star-mini" src="../assets/star.svg" alt="">
-					<img class="star-small" src="../assets/star.svg" alt="">
+
 				</div>
 			</div>
 
@@ -166,6 +144,8 @@ export default {
 	height: 62px;
 	position: relative;
 	width: fit-content;
+	opacity: 0.3;
+	filter: drop-shadow(4px 4px 5px #00000028);
 
 	.container {
 		position: absolute;
@@ -192,20 +172,6 @@ export default {
 		border-radius: 0px 10px 10px 0px;
 		position: relative;
 	}
-
-	/* 	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: -1.49vw;
-		display: block;
-		height: 4vw;
-		width: 1.5vw;
-		background-image: url(../assets/mask__2.svg);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: bottom right;
-	} */
 }
 
 .message-wait {
@@ -224,49 +190,24 @@ export default {
 	overflow: hidden;
 }
 
-.polosa {
-	width: 40%;
-	height: 100%;
-	background: transparent;
-	animation-name: movePolosa;
-	animation-duration: 3s;
-	animation-delay: 600ms;
-	animation-iteration-count: infinite;
-
-}
-
-@keyframes movePolosa {
-	from {
-		transform: translateX(-100%);
-		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.25) 50%, rgba(72, 140, 225, 1) 80%);
-	}
-
-	to {
-		transform: translateX(100%);
-		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.25) 50%, rgba(72, 140, 225, 1) 80%);
-	}
-}
-
 .polosa_2 {
 	width: 50%;
 	height: 100%;
 	background: transparent;
-	animation-name: movePolosa_2;
-	animation-duration: 3s;
-	animation-delay: 1.6s;
-	animation-iteration-count: infinite;
+	animation: movePolosa_2 4s ease infinite;
+	animation-delay: 2s;
 	z-index: 2;
 
 }
 
 @keyframes movePolosa_2 {
 	from {
-		transform: translateX(-80%);
+		transform: translateX(-180%);
 		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.25) 50%, rgba(72, 140, 225, 1) 80%);
 	}
 
 	to {
-		transform: translateX(300%);
+		transform: translateX(350%);
 		background: linear-gradient(117deg, rgba(72, 140, 225, 1) 15%, rgba(214, 214, 214, 0.25) 50%, rgba(72, 140, 225, 1) 80%);
 	}
 }
@@ -300,52 +241,20 @@ export default {
 	align-items: center;
 	justify-content: center;
 	height: fit-content;
+	position: relative;
 }
 
-/* 
-@keyframes star {
-	0% {
-		transform: rotate(0);
-	}
-
-	30% {
-		transform: rotate(0);
-
-	}
-
-	50% {
-		transform: rotate(-10deg);
-
-	}
-
-	60% {
-		filter: drop-shadow(0px 0px 1px #ffffff72);
-
-	}
-
-	75% {
-		filter: drop-shadow(0px 0px 4px #ffffffc5);
-	}
-
-	85% {
-		filter: drop-shadow(0px 0px 1px #ffffffc5);
-	}
-
-
-	100% {
-		transform: rotate(180deg);
-		filter: drop-shadow(0px 0px 0px #ffffffc5);
-	}
-} */
 .star-big__contaier {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	animation-name: starBig;
-	animation-duration: 3s;
-	animation-delay: 3s;
-	animation-iteration-count: infinite;
+	animation: starBig 4s ease-in-out infinite;
+	animation-delay: 0.5s;
+
+	img {
+		width: 20px;
+	}
 
 	.vortex:nth-child(2) {
 		position: absolute;
@@ -354,43 +263,36 @@ export default {
 		width: 0px;
 		height: 5px;
 		background-image: url(../assets/star-line.png);
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
-		animation-name: starLine;
-		animation-duration: 3s;
-		animation-delay: 3s;
-		animation-iteration-count: infinite;
+		animation: starLine 4s ease-in-out infinite;
+		animation-delay: 0.5s;
 	}
 
 	.vortex:nth-child(3) {
 		position: absolute;
-		top: 50%;
-		left: -0.5px;
+		top: calc(50%);
+		left: -1px;
 		width: 5px;
 		height: 0px;
 		background-image: url(../assets/star-line-L.png);
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
-		animation-name: starLineV;
-		animation-duration: 3s;
-		animation-delay: 3s;
-		animation-iteration-count: infinite;
-
+		animation: starLineVL 4s ease-in-out infinite;
+		animation-delay: 0.5s;
 	}
 
 	.vortex:nth-child(4) {
 		position: absolute;
 		bottom: -1px;
-		left: calc(50% + 3px);
+		left: calc(50%);
 		width: 0px;
 		height: 5px;
 		background-image: url(../assets/star-line-B.png);
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
-		animation-name: starLine;
-		animation-duration: 3s;
-		animation-delay: 3s;
-		animation-iteration-count: infinite;
+		animation: starLineHB 4s ease-in-out infinite;
+		animation-delay: 0.5s;
 	}
 
 	.vortex:nth-child(5) {
@@ -400,70 +302,11 @@ export default {
 		width: 5px;
 		height: 0px;
 		background-image: url(../assets/star-line-R.png);
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
-		animation-name: starLineV;
-		animation-duration: 3s;
-		animation-delay: 3s;
-		animation-iteration-count: infinite;
+		animation: starLineV 4s ease-in-out infinite;
+		animation-delay: 0.5s;
 	}
-}
-
-@keyframes starLineV {
-	0% {
-		height: 0;
-		transform: translateY(0px);
-	}
-
-	50% {
-		height: 1px;
-		transform: translateY(0px);
-	}
-
-	70% {
-		height: 8px;
-		transform: translateY(0px);
-	}
-
-	78% {
-		height: 0px;
-		transform: translateY(-2px)
-	}
-
-	100% {
-		height: 0;
-		transform: translateY(-2px)
-	}
-}
-
-@keyframes starLine {
-	0% {
-		width: 0;
-	}
-
-	50% {
-		width: 1px;
-		transform: translateX(0px);
-	}
-
-	70% {
-		width: 8px;
-	}
-
-	78% {
-		width: 0px;
-		transform: translateX(-2px)
-	}
-
-	100% {
-		width: 0;
-	}
-}
-
-
-.star-big {
-	width: 23px;
-
 }
 
 @keyframes starBig {
@@ -487,16 +330,12 @@ export default {
 	}
 
 	75% {
-		filter: drop-shadow(0px 0px 4px #ffffff);
+		filter: drop-shadow(0px 0px 5px #fff);
 	}
 
 	85% {
+		transform: rotate(185deg);
 		filter: drop-shadow(0px 0px 1px #ffffffc5);
-	}
-
-	95% {
-		transform: rotate(180deg);
-		filter: drop-shadow(0px 0px 0px #ffffffc5);
 	}
 
 	100% {
@@ -505,13 +344,212 @@ export default {
 	}
 }
 
+@keyframes starLineV {
+	0% {
+		height: 0;
+		transform: translateY(0px);
+	}
+
+	50% {
+		height: 0px;
+		transform: translateY(0px);
+	}
+
+	60% {
+		height: 8px;
+		transform: translateY(0px);
+	}
+
+	70% {
+		height: 8px;
+		transform: translateY(-2px);
+	}
+
+	78% {
+		height: 0px;
+		transform: translateY(-2px)
+	}
+
+	100% {
+		height: 0;
+		transform: translateY(-2px)
+	}
+}
+
+@keyframes starLineVL {
+	0% {
+		height: 0;
+		transform: translateY(0px);
+	}
+
+	50% {
+		height: 0px;
+		transform: translateY(0px);
+	}
+
+	60% {
+		height: 8px;
+		transform: translateY(0px);
+	}
+
+	70% {
+		height: 8px;
+		transform: translateY(2px);
+	}
+
+	78% {
+		height: 0px;
+		transform: translateY(2px)
+	}
+
+	100% {
+		height: 0;
+		transform: translateY(2px)
+	}
+}
+
+@keyframes starLine {
+	0% {
+		width: 0;
+		height: 5px;
+
+	}
+
+	50% {
+		width: 0px;
+		height: 5px;
+
+		transform: translateX(0px);
+	}
+
+	60% {
+		width: 8px;
+		height: 5px;
+		transform: translateX(0px);
+	}
+
+	70% {
+		width: 8px;
+		height: 5px;
+		transform: translateX(-2px);
+	}
+
+	78% {
+		width: 0px;
+		height: 5px;
+		transform: translateX(-2px)
+	}
+
+	100% {
+		height: 5px;
+
+		width: 0;
+		transform: translateX(-2px)
+	}
+}
+
+@keyframes starLineHB {
+	0% {
+		width: 0;
+		height: 5px;
+
+	}
+
+	50% {
+		width: 0px;
+		height: 5px;
+
+		transform: translateX(0px);
+	}
+
+	60% {
+		width: 8px;
+		height: 5px;
+		transform: translateX(0px);
+	}
+
+	70% {
+		width: 8px;
+		height: 5px;
+		transform: translateX(2px);
+	}
+
+	78% {
+		width: 0px;
+		height: 5px;
+		transform: translateX(2px)
+	}
+
+	100% {
+		height: 5px;
+
+		width: 0;
+		transform: translateX(2px)
+	}
+}
+
 .star-mini {
-	width: 12px;
 	position: absolute;
+	bottom: calc(50% - 5px);
+	left: calc(50% - 5px);
+	width: 8px;
+	height: 8px;
+	transform: rotate(0) translateX(0px) translateY(0%);
+	filter: drop-shadow(0px 0px 4px #ffffff);
+	animation: starMini 4s ease-in-out infinite;
+	animation-delay: 0.5s;
+	transition: all 500ms cubic-bezier(1.000, 0.050, 0.940, 0.760);
+	transition-timing-function: cubic-bezier(1.000, 0.050, 0.940, 0.760);
+}
+
+@keyframes starMini {
+	0% {
+		transform: translateX(0%) translateY(0%) rotate(0deg);
+	}
+
+	60% {
+		transform: translateX(0%) translateY(0%) rotate(0deg);
+	}
+
+	90% {
+		transform: translateX(200%) translateY(-190%) rotate(120deg);
+	}
+
+	100% {
+
+		transform: translateX(200%) translateY(-190%) rotate(120deg)
+	}
 }
 
 .star-small {
-	width: 6px;
 	position: absolute;
+	bottom: calc(50% - 4px);
+	left: calc(50% - 4px);
+	width: 4px;
+	height: 4px;
+	transform: rotate(0) translateX(0px) translateY(0%);
+	filter: drop-shadow(0px 0px 4px #ffffff);
+	animation: starSmall 4s ease-in-out infinite;
+	animation-delay: 0.5s;
+	transition: all 500ms cubic-bezier(1.000, 0.545, 1.000, 0.850);
+	/* custom */
+
+	transition-timing-function: cubic-bezier(1.000, 0.545, 1.000, 0.850);
+	/* custom */
+}
+
+@keyframes starSmall {
+	0% {
+		transform: translateX(0%) translateY(0%) rotate(0deg);
+	}
+
+	60% {
+		transform: translateX(0%) translateY(0%) rotate(0deg);
+	}
+
+	100% {
+
+		transform: translateX(20px) translateY(-8px) rotate(120deg)
+	}
 }
 </style>
