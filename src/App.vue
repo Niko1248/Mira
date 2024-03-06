@@ -1,15 +1,19 @@
-<script setup>
-import Animation from './components/Animation.vue';
-</script>
-
 <template>
+  <div class="container">
+    <LandingPage />
+  </div>
 
-  <Animation class="Animation" />
 </template>
 
+<script setup>
+import LandingPage from './components/LandingPage.vue';
+
+</script>
+
 <style lang="scss">
-.Animation {
+.container {
   width: 100%;
-  margin: 5vw;
+  display: flex;
+  justify-content: center;
 }
 </style>

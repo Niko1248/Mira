@@ -2,13 +2,14 @@
 @import "./fonts/stylesheet.css";
 
 body{
-    background-color: #3B3F8C;
-    background-image: url(./bg_mask.svg);
+    background-color: $main-color;
+    /* background-image: url(./bg_mask.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     justify-content: start;
     align-items: center;
-    height: 90vh;
+    height: 90vh; */
+    margin: 0;
 }

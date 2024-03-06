@@ -250,15 +250,18 @@ export default {
 @keyframes starBig {
 	0% {
 		transform: rotate(0);
+		filter: drop-shadow(0px 0px 0px #ffffffc5);
 	}
 
 	30% {
 		transform: rotate(0);
+		filter: drop-shadow(0px 0px 0px #ffffffc5);
 
 	}
 
 	50% {
 		transform: rotate(-10deg);
+		filter: drop-shadow(0px 0px 0px #ffffffc5);
 
 	}
 
