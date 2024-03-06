@@ -10,15 +10,17 @@
                 <h1 class="banner__tagline">Искусственный интеллект в роли психолога</h1>
                 <a class="banner__button">Пробовать бесплатно</a>
             </div>
-            <div class="banner__chat"></div>
+            <div class="banner__chat">
+                <BannerChat />
+            </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import NavMenu from './NavMenu.vue';
-import Brain from '../assets/icons/Brain-ico.vue';
-
+import NavMenu from "./NavMenu.vue";
+import BannerChat from "./BannerChat.vue";
+import Brain from "../assets/icons/Brain-ico.vue";
 </script>
 
 <style lang="scss">
@@ -70,7 +72,7 @@ import Brain from '../assets/icons/Brain-ico.vue';
     font-size: 56px;
     font-weight: 500;
     line-height: 110%;
-    color: #1E1E1E;
+    color: #1e1e1e;
     margin: 0;
     margin-bottom: 50px;
 }
@@ -88,6 +90,5 @@ import Brain from '../assets/icons/Brain-ico.vue';
 
 .banner__chat {
     width: 428px;
-
 }
 </style>
