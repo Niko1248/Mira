@@ -40,6 +40,7 @@
     display: flex;
     justify-content: center;
     gap: 114px;
+    max-height: fit-content;
   }
 
   .banner__content {

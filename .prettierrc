@@ -8,5 +8,6 @@
 	"proseWrap": "preserve",
 	"bracketSameLine": true,
 	"singleAttributePerLine": true,
-	"vueIndentScriptAndStyle": true
+	"vueIndentScriptAndStyle": true,
+	"endOfLine": "lf"
 }

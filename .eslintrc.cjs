@@ -25,8 +25,8 @@ module.exports = {
   },
   plugins: ['vue', 'prettier'],
   rules: {
-    indent: ['error', 'space'],
     'prettier/prettier': [2, { useTabs: false }],
+    'no-inline-comments': 'off',
     'vue/max-attributes-per-line': [
       'error',
       {
@@ -109,7 +109,6 @@ module.exports = {
       {
         enforceForRenamedProperties: false
       }
-    ],
-    'linebreak-style': ['error', 'unix']
+    ]
   }
 }
