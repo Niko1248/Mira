@@ -26,11 +26,10 @@
             </linearGradient>
         </defs>
     </svg>
-
 </template>
 
 <script>
 export default {
-    name: 'MainLogo'
-}
+    name: "MainLogo",
+};
 </script>
