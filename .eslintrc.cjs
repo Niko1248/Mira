@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
+  // eslint-disable-next-line prettier/prettier
   extends: [
     'eslint:recommended',
     'plugin:vue/vue3-essential',
@@ -27,17 +28,6 @@ module.exports = {
   rules: {
     'prettier/prettier': [2, { useTabs: false }],
     'no-inline-comments': 'off',
-    'vue/max-attributes-per-line': [
-      'error',
-      {
-        singleline: {
-          max: 1
-        },
-        multiline: {
-          max: 1
-        }
-      }
-    ],
     'vue/order-in-components': [
       'error',
       {
@@ -109,6 +99,8 @@ module.exports = {
       {
         enforceForRenamedProperties: false
       }
-    ]
+    ],
+    'import/extensions': 'off', // обеспечить согласованное использование расширения файла в пути импорта
+    'import/prefer-default-export': 'off' // ESLint предпочитает экспорт по умолчанию импорт/предпочитает экспорт по умолчанию
   }
 }

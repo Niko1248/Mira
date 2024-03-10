@@ -1,4 +1,3 @@
-/* eslint-disable no-inline-comments */
 <template>
   <div class="chat">
     <div
@@ -85,7 +84,8 @@
       }
     },
     watch: {
-      typedComplete(newValue, value) {
+      //Отслеживает, если GPT закончил набирать сообщение
+      typedComplete() {
         if (this.typedComplete) {
           setTimeout(this.resetChat, 1200)
         }
@@ -117,6 +117,7 @@
         this.typedText = ''
         this.typedComplete = false
       },
+      // Функция набора ответа по 1 слову
       typeWord() {
         if (this.currentIndex < this.words.length) {
           this.typedText +=
@@ -164,17 +165,18 @@
   .fade-gpt-leave-active {
     transition: all 1.2s ease;
   }
-
+  //Анимация появления окна человека
   .fade-human-enter-from {
     opacity: 0;
     transform: translateY(-100px);
   }
+  //Анимация появления окна GPT
   .fade-gpt-enter-from {
     opacity: 0;
   }
+  //Анимация исчезновения обоих окон
   .fade-human-leave-to,
   .fade-gpt-leave-to {
     opacity: 0;
   }
 </style>
-/* eslint-disable no-inline-comments */
