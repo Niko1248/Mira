@@ -14,9 +14,10 @@
   @import '../assets/variables';
 
   .LandingPage {
-    width: $main-width;
-
+    max-width: $main-width;
+    width: 100%;
     padding: 10px;
+    box-sizing: border-box;
 
     @media (max-width: $mobile-width) {
       width: 100%;

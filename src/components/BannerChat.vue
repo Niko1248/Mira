@@ -196,7 +196,7 @@
   }
 
   .chat__human-text {
-    background-color: $chat-human;
+    background-color: $main-blue;
     color: white;
     position: relative;
 
