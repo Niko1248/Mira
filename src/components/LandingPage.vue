@@ -1,11 +1,13 @@
 <template>
   <div class="LandingPage">
     <Banner />
+    <DignityBlock />
   </div>
 </template>
 
 <script setup>
   import Banner from './Banner.vue'
+  import DignityBlock from './DignityBlock.vue'
 </script>
 
 <style lang="scss">
@@ -13,8 +15,7 @@
 
   .LandingPage {
     width: $main-width;
-    display: flex;
-    justify-content: center;
+
     padding: 10px;
 
     @media (max-width: $mobile-width) {

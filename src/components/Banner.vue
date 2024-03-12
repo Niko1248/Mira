@@ -35,12 +35,14 @@
     width: 100%;
     border-radius: 20px;
     font-family: Onest;
+    padding-top: 13px;
 
     @media (max-width: $mobile-width) {
       background-image: url(../assets/img/banner_bg--mobile.jpg);
       background-size: cover;
       border-radius: 16px;
       min-height: 100svh;
+      padding-top: 0;
     }
   }
 
